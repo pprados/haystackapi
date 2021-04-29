@@ -48,7 +48,8 @@ Shift-for-Haystack is a set of API to implement the [Haystack project specificat
 It's compatible with modern Python with typing, Flask server in data center, Edge (Raspberry?) or in AWS Lambda
 function.
 
-Clic to see a demo.
+Click to see a demo.
+
 [![Shift-4-haystack demo](http://img.youtube.com/vi/5DBcHUlwv4g/0.jpg)](http://www.youtube.com/watch?v=5DBcHUlwv4g "Shift-4-Haystack demo")
 
 # Quick link
@@ -138,9 +139,10 @@ $ pip install "shaystack[flask,graphql,lambda]"
 [`haystack.ipynb`](https://github.com/engie-group/shaystack/blob/develop/haystack.ipynb) jupyter notebook contains code
 to read, filter, manipulate and print `Grid` objects containing haystack data.
 
-Try it online [here](https://colab.research.google.com/github/pprados/shaystack/blob/develop/haystack.ipynb), test
-the [User interface](https://skz7riv2yk.execute-api.us-east-2.amazonaws.com/dev/)
-or run it with [docker](#docker)
+Try it online [here](https://colab.research.google.com/github/engie-group/shaystack/blob/develop/haystack.ipynb)
+or test the [User interface](https://skz7riv2yk.execute-api.us-east-2.amazonaws.com/dev/)
+
+Or run with [docker](#docker)
 
 ## Python API
 
@@ -225,7 +227,7 @@ This layer implement the standard HaystackAPI with different providers (URL, S3,
 
 ### Installing
 
-Using `pip install shaystack`. You can add the support of some options for server side:
+Using `pip install`. You can add the support of some options:
 
 - `pip install "shaystack[flask]"` allows you to use a local [Flask](https://flask.palletsprojects.com/en/1.1.x/)
   server
@@ -282,7 +284,7 @@ For the demonstration,
 $ # Demo
 $ # - Install components
 $ pip install 'shaystack[graphql]'
-$ # - Expose haystack file on s3 bucket, with Haystack and GraphQL API
+$ # - Expose haystack file with Haystack and GraphQL API
 $ HAYSTACK_PROVIDER=shaystack.providers.db \
   HAYSTACK_DB=https://shaystack.s3.eu-west-3.amazonaws.com/carytown.zinc \
   shaystack
@@ -503,7 +505,7 @@ or build your image
 
 ```console
 $ # Get docker file
-$ wget https://github.com/engie-group/shaystack/blob/develop/docker/Dockerfile
+$ wget https://github.com/engie-group/shaystack/blob/develop/Dockerfile
 $ # Build the image
 $ docker build \
 		--build-arg PORT='3000' \
@@ -592,6 +594,8 @@ See [here](https://github.com/engie-group/shaystack/blob/develop/docs/contributi
 # License
 
 See [LICENCE](https://github.com/engie-group/shaystack/blob/develop/LICENSE) file
+
+[Dependencies licenses]()
 
 # TODO
 

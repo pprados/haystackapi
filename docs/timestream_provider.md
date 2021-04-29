@@ -5,7 +5,7 @@ This provider extends the `DBProvider` to manage time-series with
 this provider. Add the variable `HAYSTACK_DB` to describe the link to the backend to read the ontology and `HAYSTACK_TS`
 to describe the link to *AWS Time stream*. The format of `HAYSTACK_TS` is :
 
-`\<timestream\>://\<database\>[?mem_ttl=<memory retention in hour>&mag_ttl=<magnetic retention in day>][#<tablename>]`
+`timestream://\<database\>[?mem_ttl=<memory retention in hour>&mag_ttl=<magnetic retention in day>][#<tablename>]`
 
 The parameters `mem_ttl` and `mag_ttl` are optionals and be used only to create the table.
 Read [this](https://docs.aws.amazon.com/timestream/latest/developerguide/API_RetentionProperties.html)
@@ -40,7 +40,7 @@ parameter to describe the link to the time-series database:
 
 ```console
 $ shaystack_import_db sample/carytown.zinc \
-    sqlite3:///test.db#haystack \
+    sample/carytown.zinc \
     timestream://SHaystackDemo
 ```
 
